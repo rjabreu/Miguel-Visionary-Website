@@ -1,0 +1,58 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Poppins|Suranna");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-top: 250px;
+  font-family: "Suranna", serif;
+  font-size: 14px; }
+
+header {
+  height: 300px;
+  padding-top: 50px;
+  background: #f07057;
+  text-align: center;
+  font-family: "Poppins", sans-serif; }
+
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px; }
+
+.main-nav,
+.main {
+  position: relative; }
+
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 150;
+  margin-bottom: -80px; }
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+.main {
+  background: #f2f2e8;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px; }
+
+/*# sourceMappingURL=main.css.map */

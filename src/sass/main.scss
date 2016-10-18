@@ -1,0 +1,64 @@
+@import "css3-mixins-lib";
+@import url('https://fonts.googleapis.com/css?family=Poppins|Suranna');
+//variables
+$font-poppins: 'Poppins',
+sans-serif;
+$font-suranna: 'Suranna',
+serif;
+$black:#000;
+$midnight:#050215;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 250px;
+    font-family: $font-suranna;
+    font-size: 14px;
+}
+
+header {
+    height: 300px;
+    padding-top: 50px;
+    background: #f07057;
+    text-align: center;
+    font-family: $font-poppins;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.main-nav,
+.main {
+    position: relative;
+}
+
+.main-nav {
+    background: #fff;
+    height: 80px;
+    z-index: 150;
+    margin-bottom: -80px;
+
+}
+
+header,
+.main-nav-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+@media screen and (min-width: 1025px) {}
+
+@media screen and (max-width: 1024px) {}
