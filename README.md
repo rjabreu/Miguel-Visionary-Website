@@ -1,19 +1,5 @@
-# Logo Prototype
+A website for Miguel's brand: Visionary.
 
-A prototype project for a client logo in SVG that'll be animated.
+Designed by Kitska - http://www.kitska.com/
 
-```
-Dependencies installation:
-
-* npm install
-
-```
-
-Workflow:
----
-
-* Build: `gulp build`
-
-* Start the development server: `gulp serve` or `gulp`
-
-* To run tests: `gulp test`
+Find more about him over https://www.instagram.com/miguel_visionary/
