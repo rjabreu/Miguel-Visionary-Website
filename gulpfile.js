@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     KarmaServer = require('karma').Server,
     rename = require('gulp-rename'),
     webpack = require('webpack'),
+    imagemin = require ('gulp-imagemin'),
     webpackConfig = require('./webpack.config.js'),
     gulpWebpack = require('gulp-webpack');
 var browser = browser === undefined ? 'google chrome' : browser;
@@ -16,6 +17,13 @@ gulp.task("webpack", function() {
         .pipe(rename('bundle.js'))
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(gulp.dest('./public/js/'));
+});
+
+//Compress all images
+gulp.task('images', function() {
+ return gulp.src('./src/images/**/*')
+ .pipe(imagemin())
+ .pipe(gulp.dest('./public/images'))
 });
 
 gulp.task('sass', function() {
@@ -28,6 +36,9 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
+
+
+
 gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
     gulp.watch("./**/*.html", ['reload']);
@@ -35,6 +46,7 @@ gulp.task('watch', function() {
     gulp.watch("./src/js/**/*.js", ['reload']);
     // gulp.watch('./src/**/*.js', ['test']);
     gulp.watch('./src/**/*.js', ['webpack']);
+    gulp.watch('./src/images/**/*',['images']);
 });
 
 gulp.task('reload', function() {
@@ -60,6 +72,6 @@ gulp.task('serve', ['watch'], function() {
 
 });
 
-gulp.task('build', ['webpack', 'sass']);
+gulp.task('build', ['webpack', 'sass', 'images']);
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve','images']);
