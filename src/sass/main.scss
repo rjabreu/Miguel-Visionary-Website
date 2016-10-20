@@ -136,7 +136,7 @@ h1 {
 .instagram-feed{
     text-align: center;
     background-color: white;
-   
+    
     h2{
         font-family: $font-suranna;
         font-size: 4em;
@@ -145,12 +145,12 @@ h1 {
     }
 
     .instagram-feed-images{
-        
+            max-width: 1920px;
             display: flex;
             flex-flow: row wrap;
         .instagram-image{
             width: 25%;
-            height: 280px;
+            height: 500px;
             display: inline-block;
             background-size: cover;
         }
