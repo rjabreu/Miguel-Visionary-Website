@@ -7,18 +7,26 @@ $font-suranna: 'Suranna',
 serif;
 $black:#000;
 $midnight:#050215;
+$light-grey: #f5f1ed;
+$font-small:14px;
+ $left-right-margin: 50px;
+
 * {
     box-sizing: border-box;
 }
 
+
 html{
     font-size: 14px;
+    color: black;
+    letter-spacing: 0.1em;
 }
 
 body {
     margin: 0;
     font-family: $font-suranna;
     font-size: 14px;
+    background:$light-grey;
 }
 
 header {
@@ -32,11 +40,33 @@ header {
     position: relative;
 }
 
+ul{
+    list-style: none;
+    margin: 0;
+}
+
 h1 {
     font-size: 80px;
     font-weight: 700;
     line-height: 90px;
 }
+.container{
+    padding: 0  $left-right-margin;
+}
+
+#body-wrapper{
+    margin: 0 2em;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+
 
 .main-nav,
 .main {
@@ -59,10 +89,9 @@ h1 {
 }
 
 .main {
-    background: #f2f2e8;
-    padding: 110px 50px 50px;
     column-count: 2;
     column-gap: 40px;
+    background-color: $light-grey;
 }
 
 #banner-title{
@@ -78,8 +107,8 @@ h1 {
         display: inline;
         position: absolute;
         top: 50%;
-        left: 0;
-        transform: translate(150%, -50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         
         li{
             display: inline;
@@ -93,10 +122,6 @@ h1 {
         }
     }
 
-    #nav-wrapper{
-       
-    }
-
     #logo{
         width: 4em;
         height: 4em;
@@ -104,6 +129,75 @@ h1 {
         top: 50%;
         transform: translate(0%, -50%);
         margin-left: 5em;
+    }
+}
+
+
+.instagram-feed{
+    text-align: center;
+    background-color: white;
+   
+    h2{
+        font-family: $font-suranna;
+        font-size: 4em;
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    .instagram-feed-images{
+        
+            display: flex;
+            flex-flow: row wrap;
+        .instagram-image{
+            width: 25%;
+            height: 280px;
+            display: inline-block;
+            background-size: cover;
+        }
+    }
+}
+
+
+#social-links{
+    background-color: white;
+    height: 60px;
+    position: relative;
+    text-align: center;
+    a{
+        color:$black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    ul{
+        list-style: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin:0;
+        padding: 0;
+    }
+
+    li{
+        display: inline;
+        margin: 2em;
+        font-weight: 700;
+        
+    }
+}
+footer{
+    width:100%;
+    #copyrights{
+        height: 60px;
+        background-color: #f1eded;
+        text-align: center;
+        font-size: $font-small;
+
+        #copyrights-wrapper{
+            padding: 0 $left-right-margin;
+        }
     }
 }
 
