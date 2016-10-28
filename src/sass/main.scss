@@ -201,6 +201,23 @@ footer{
     }
 }
 
+.about{
+    
+
+    .about-top{
+        background-color:white;
+        padding: 0 50px;
+        text-align:right;
+        .about-stats{
+            
+        }
+    }
+    .about-bottom{
+        padding: 0 50px;
+        background-color:$light-grey;
+    }
+}
+
 @media screen and (min-width: 1025px) {}
 
 @media screen and (max-width: 1024px) {}
