@@ -298,6 +298,17 @@ section.featured {
             }
         }
     }
+    .feature-right {
+        text-align: center;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.beige {
+    background-color: $beige;
 }
 
 @media screen and (min-width: 1025px) {}
